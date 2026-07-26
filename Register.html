@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inscription | LA BOURSE OCIM</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<div class="register-container">
+<div class="register-card">
+<h1>Créer un compte</h1>
+<form id="registerForm">
+<div class="row">
+<div class="inputBox">
+<label>Nom</label>
+<input type="text" required>
+</div>
+<div class="inputBox">
+<label>Prénom</label>
+<input type="text" required>
+</div>
+</div>
+<div class="inputBox">
+<label>Adresse e-mail</label>
+<input type="email" required>
+</div>
+<div class="inputBox">
+<label>Téléphone</label>
+<input type="tel" required>
+</div>
+<div class="inputBox">
+<label>Adresse</label>
+<input type="text" required>
+</div>
+<div class="row">
+<div class="inputBox">
+<label>Ville</label>
+<input type="text" required>
+</div>
+<div class="inputBox">
+<label>Pays</label>
+<input type="text" required>
+</div>
+</div>
+<div class="inputBox">
+<label>Mot de passe</label>
+<input type="password" required>
+</div>
+<div class="inputBox">
+<label>Confirmer le mot de passe</label>
+<input type="password" required>
+</div>
+<button class="btn-login">
+Créer mon compte
+</button>
+</form>
+<p style="margin-top:20px">
+Déjà inscrit ?
+<a href="login.html">
+Se connecter
+</a>
+</p>
+</div>
+</div>
+<script>
+document
+.getElementById("registerForm")
+.addEventListener("submit",function(e){
+e.preventDefault();
+alert("Votre compte a été créé.");
+window.location="login.html";
+});
+</script>
+</body>
+</html>
