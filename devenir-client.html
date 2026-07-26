@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Devenir Client | LA BOURSE OCIM</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+
+<h1>LA BOURSE OCIM</h1>
+
+<p>Création de votre espace client</p>
+
+</div>
+
+
+<a href="index.html" class="btn">
+Accueil
+</a>
+
+
+</header>
+
+
+
+
+<section class="client-section">
+
+
+<h2>
+Devenir client
+</h2>
+
+
+<p class="subtitle">
+
+Créez votre compte personnel pour accéder à votre espace utilisateur.
+
+</p>
+
+
+
+
+<div class="client-card">
+
+
+
+<div class="step">
+
+<i class="fa-solid fa-user-plus"></i>
+
+<h3>
+1. Création du compte
+</h3>
+
+<p>
+
+Renseignez vos informations personnelles afin de créer votre profil.
+
+</p>
+
+</div>
+
+
+
+<div class="step">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>
+2. Vérification du profil
+</h3>
+
+<p>
+
+Une vérification d'identité peut être réalisée selon les exigences réglementaires applicables.
+
+</p>
+
+</div>
+
+
+
+<div class="step">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>
+3. Accès à votre espace
+</h3>
+
+<p>
+
+Consultez vos informations, vos préférences et les marchés suivis.
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="client-form">
+
+
+<h2>
+Créer mon compte
+</h2>
+
+
+
+<form id="clientForm">
+
+
+
+<div class="form-row">
+
+
+<input 
+type="text"
+placeholder="Nom"
+required>
+
+
+<input 
+type="text"
+placeholder="Prénom"
+required>
+
+
+</div>
+
+
+
+<input
+type="email"
+placeholder="Adresse email"
+required>
+
+
+
+<input
+type="tel"
+placeholder="Numéro de téléphone"
+required>
+
+
+
+<input
+type="text"
+placeholder="Ville"
+required>
+
+
+
+<input
+type="text"
+placeholder="Pays"
+required>
+
+
+
+<input
+type="password"
+placeholder="Créer un mot de passe"
+required>
+
+
+
+<button class="btn">
+
+Créer mon espace client
+
+</button>
+
+
+
+</form>
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+<footer>
+
+
+<h2>
+LA BOURSE OCIM
+</h2>
+
+
+<p>
+SIRET : 93234332000010
+</p>
+
+
+<p>
+SIREN : 932343320
+</p>
+
+
+<p>
+Code NAF : 7022Z
+</p>
+
+
+<p>
+© 2026 LA BOURSE OCIM
+</p>
+
+
+</footer>
+
+
+
+
+
+<script>
+
+
+document
+.getElementById("clientForm")
+.addEventListener("submit",function(e){
+
+
+e.preventDefault();
+
+
+alert("Votre demande de création de compte a été enregistrée.");
+
+
+window.location="dashboard.html";
+
+
+});
+
+
+</script>
+
+
+
+</body>
+
+</html>
