@@ -1,0 +1,215 @@
+/*===========================
+ LA BOURSE OCIM
+ app.js
+===========================*/
+
+// MENU LATERAL
+
+const menu = document.querySelector(".menu");
+const sidebar = document.querySelector(".sidebar");
+
+menu.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+});
+
+// Fermer le menu si on clique ailleurs
+
+document.addEventListener("click", function(e){
+
+    if(
+        !sidebar.contains(e.target) &&
+        !menu.contains(e.target)
+    ){
+
+        sidebar.classList.remove("active");
+
+    }
+
+});
+
+// Animation d'apparition
+
+const observer = new IntersectionObserver(entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+});
+
+document.querySelectorAll(".card").forEach(card=>{
+
+observer.observe(card);
+
+});
+
+document.querySelectorAll(".avis-box").forEach(card=>{
+
+observer.observe(card);
+
+});
+
+document.querySelectorAll(".box div").forEach(card=>{
+
+observer.observe(card);
+
+});
+
+// Bouton retour haut
+
+const topButton=document.createElement("button");
+
+topButton.innerHTML="⬆";
+
+topButton.id="topButton";
+
+document.body.appendChild(topButton);
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>300){
+
+topButton.style.display="block";
+
+}else{
+
+topButton.style.display="none";
+
+}
+
+});
+
+topButton.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+// Date et heure
+
+function updateClock(){
+
+const now=new Date();
+
+const options={
+
+weekday:"long",
+
+year:"numeric",
+
+month:"long",
+
+day:"numeric",
+
+hour:"2-digit",
+
+minute:"2-digit",
+
+second:"2-digit"
+
+};
+
+const clock=document.getElementById("clock");
+
+if(clock){
+
+clock.innerHTML=now.toLocaleDateString("fr-FR",options);
+
+}
+
+}
+
+setInterval(updateClock,1000);
+
+// Compteur animation
+
+function compteur(id,cible){
+
+let nombre=0;
+
+const vitesse=Math.ceil(cible/100);
+
+const interval=setInterval(()=>{
+
+nombre+=vitesse;
+
+if(nombre>=cible){
+
+nombre=cible;
+
+clearInterval(interval);
+
+}
+
+const element=document.getElementById(id);
+
+if(element){
+
+element.innerHTML=nombre.toLocaleString("fr-FR");
+
+}
+
+},20);
+
+}
+
+compteur("investisseurs",12500);
+compteur("transactions",650000);
+compteur("satisfaction",99);
+
+// ==============================
+// EXEMPLE DE DONNÉES DE MARCHÉ
+// ==============================
+//
+// Remplace ces valeurs par un appel
+// à une API de marché autorisée
+// lorsque tu mettras le site en ligne.
+//
+
+const marche = {
+
+gold:"3 365,20 $",
+
+btc:"118 550 $",
+
+nasdaq:"24 620",
+
+dow:"45 103",
+
+cac40:"8 142",
+
+eurusd:"1.1745"
+
+};
+
+document.getElementById("gold").innerHTML=marche.gold;
+
+document.getElementById("btc").innerHTML=marche.btc;
+
+document.getElementById("nasdaq").innerHTML=marche.nasdaq;
+
+document.getElementById("dow").innerHTML=marche.dow;
+
+document.getElementById("cac40").innerHTML=marche.cac40;
+
+document.getElementById("eurusd").innerHTML=marche.eurusd;
+
+// Message de bienvenue
+
+setTimeout(()=>{
+
+console.log("Bienvenue sur LA BOURSE OCIM");
+
+},1000);
