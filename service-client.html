@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Service Client | LA BOURSE OCIM</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+
+<h1>LA BOURSE OCIM</h1>
+
+<p>Assistant Service Client</p>
+
+</div>
+
+
+<a href="index.html" class="btn">
+Accueil
+</a>
+
+
+</header>
+
+
+
+
+<section class="chat-section">
+
+
+<h2>
+Assistant LA BOURSE OCIM
+</h2>
+
+
+<p class="intro">
+
+Posez vos questions concernant les marchés financiers,
+l'entreprise ou les services proposés.
+
+</p>
+
+
+
+<div class="chat-box" id="chatBox">
+
+
+<div class="bot-message">
+
+<i class="fa-solid fa-robot"></i>
+
+Bonjour, je suis l'assistant virtuel de LA BOURSE OCIM.
+Comment puis-je vous aider ?
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="chat-input">
+
+
+<input 
+type="text"
+id="userMessage"
+placeholder="Écrivez votre question...">
+
+
+<button onclick="sendMessage()">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<script>
+
+
+function sendMessage(){
+
+
+let input=document.getElementById("userMessage");
+
+let message=input.value;
+
+
+if(message.trim()==""){
+return;
+}
+
+
+
+let chat=document.getElementById("chatBox");
+
+
+
+chat.innerHTML += `
+
+<div class="user-message">
+
+${message}
+
+</div>
+
+`;
+
+
+
+let answer="";
+
+
+if(message.toLowerCase().includes("or")){
+
+answer="L'or est un actif utilisé par de nombreux investisseurs pour diversifier leur portefeuille.";
+
+}
+
+else if(message.toLowerCase().includes("bourse")){
+
+answer="La bourse permet d'investir dans des entreprises cotées et de suivre leurs performances.";
+
+}
+
+else if(message.toLowerCase().includes("contact")){
+
+answer="Un conseiller pourra vous accompagner via le service client.";
+
+}
+
+else{
+
+answer="Merci pour votre question. Un conseiller pourra vous répondre pour plus d'informations.";
+
+}
+
+
+
+setTimeout(()=>{
+
+
+chat.innerHTML += `
+
+<div class="bot-message">
+
+<i class="fa-solid fa-robot"></i>
+
+${answer}
+
+</div>
+
+`;
+
+
+chat.scrollTop=chat.scrollHeight;
+
+
+},700);
+
+
+
+input.value="";
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
