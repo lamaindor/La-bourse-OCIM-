@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LA BOURSE OCIM</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h1>LA BOURSE OCIM</h1>
+<p>Investissez dans votre avenir</p>
+</div>
+
+<div class="menu">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</header>
+
+<nav class="sidebar">
+
+<ul>
+
+<li><a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+
+<li><a href="devenir-client.html"><i class="fa-solid fa-user-plus"></i> Devenir Client</a></li>
+
+<li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Connexion</a></li>
+
+<li><a href="register.html"><i class="fa-solid fa-user"></i> Inscription</a></li>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Tableau de bord</a></li>
+
+<li><a href="service-client.html"><i class="fa-solid fa-headset"></i> Service Client</a></li>
+
+<li><a href="informations.html"><i class="fa-solid fa-circle-info"></i> Informations</a></li>
+
+<li><a href="avis.html"><i class="fa-solid fa-star"></i> Avis Clients</a></li>
+
+<li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
+<li><a href="logout.html"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h2>Investissez dans les marchés financiers mondiaux</h2>
+
+<p>
+
+Suivez les marchés boursiers en temps réel, les indices internationaux,
+le prix de l'or, des devises et des cryptomonnaies.
+
+</p>
+
+<a href="devenir-client.html" class="btn">
+
+COMMENCER
+
+</a>
+
+</section>
+
+<section class="marches">
+
+<h2>Marchés en Direct</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>OR (XAU/USD)</h3>
+
+<p id="gold">
+
+Chargement...
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>NASDAQ</h3>
+
+<p id="nasdaq">
+
+Chargement...
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>CAC 40</h3>
+
+<p id="cac40">
+
+Chargement...
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>DOW JONES</h3>
+
+<p id="dow">
+
+Chargement...
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>BITCOIN</h3>
+
+<p id="btc">
+
+Chargement...
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>EUR/USD</h3>
+
+<p id="eurusd">
+
+Chargement...
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="apropos">
+
+<h2>Pourquoi choisir LA BOURSE OCIM ?</h2>
+
+<div class="box">
+
+<div>
+
+<h3>Sécurité</h3>
+
+<p>
+
+Protection des données, conformité réglementaire et environnement sécurisé.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>Performance</h3>
+
+<p>
+
+Suivez les marchés internationaux avec des données actualisées.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>Accompagnement</h3>
+
+<p>
+
+Notre équipe vous accompagne dans votre parcours d'investissement.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="avis">
+
+<h2>Ils nous font confiance</h2>
+
+<div class="commentaires">
+
+<div class="avis-box">
+
+⭐⭐⭐⭐⭐
+
+<h3>Jean M.</h3>
+
+<p>
+
+Très satisfait de la plateforme.
+
+</p>
+
+</div>
+
+<div class="avis-box">
+
+⭐⭐⭐⭐⭐
+
+<h3>Sophie L.</h3>
+
+<p>
+
+Interface simple et agréable.
+
+</p>
+
+</div>
+
+<div class="avis-box">
+
+⭐⭐⭐⭐⭐
+
+<h3>David R.</h3>
+
+<p>
+
+Excellent suivi des marchés.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>LA BOURSE OCIM</h2>
+
+<p>SIRET : 93234332000010</p>
+
+<p>SIREN : 932343320</p>
+
+<p>Code NAF : 7022Z</p>
+
+<p>TVA : FR52932343320</p>
+
+<p>Catégorie juridique : SAS</p>
+
+<p>Chiffre d'affaires : 130 000 000 €</p>
+
+<p>© 2026 LA BOURSE OCIM - Tous droits réservés</p>
+
+</footer>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
